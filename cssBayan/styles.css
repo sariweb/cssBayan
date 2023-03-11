@@ -28,6 +28,18 @@ h1 {
   width: 100%;
 }
 
+.all-memes:hover {
+  cursor: pointer;
+}
+
+.all-memes:hover .meme-block label {
+  color: #000;
+}
+
+.all-memes:hover .meme-block label:after {
+  display: inline-block;
+}
+
 .meme-block {
   padding: 1em 0;
   border-bottom: 0.1em solid #bbb;
@@ -42,11 +54,12 @@ h1 {
   font-weight: bold;
   position: relative;
   display: block;
-  color: #000;
+  color: #6495ED;
   cursor: pointer;
 }
 
 .meme-block label:after {
+  display: none;
   content: "+";
   position: absolute;
   font-size: 1em;
@@ -58,7 +71,7 @@ h1 {
 }
 
 .meme-block input:checked + label {
-  color: #6495ED;
+  color: #000;
 }
 
 .meme-block input:checked + label:after {
@@ -100,6 +113,10 @@ input[name=meme]:checked ~ .meme-content.content-size {
   .container-acc {
     padding: 1em 2em;
   }
+
+  .meme-block label:after {
+    display: inline-block;
+  }
 }
 
 
@@ -117,4 +134,7 @@ input[name=meme]:checked ~ .meme-content.content-size {
     padding: 0.5em;
   }
 
+  .meme-block label:after {
+    display: inline-block;
+  }
 }
