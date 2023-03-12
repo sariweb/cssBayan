@@ -13,7 +13,7 @@ h1 {
 }
 
 .container-back {
-  width: 60%;
+  width: 90%;
   margin: 5% auto;
   padding: 2%;
   display: flex;
@@ -41,8 +41,8 @@ h1 {
 }
 
 .meme-block {
-  padding: 1em 0;
-  border-bottom: 0.1em solid #bbb;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid #bbb;
 }
 
 .meme-block input[name='meme'] {
@@ -56,6 +56,8 @@ h1 {
   display: block;
   color: #6495ED;
   cursor: pointer;
+  height: 3rem;
+  transition: height 0.5s;
 }
 
 .meme-block label:after {
@@ -72,6 +74,42 @@ h1 {
 
 .meme-block input:checked + label {
   color: #000;
+  height: 25rem;
+  background-position-y: 5rem;
+  transition: height 0.5s;
+}
+
+.meme-block label.meme1 {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('assets/meme1.jpg');
+  background-position-y: 5rem;
+}
+
+.meme-block label.meme2 {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('assets/meme2.jpg');
+  background-position-y: 5rem;
+}
+
+.meme-block label.meme3 {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('assets/meme3.jpg');
+  background-position-y: 5rem;
+}
+
+.meme-block label.meme4 {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('assets/meme4.jpg');
+  background-position-y: 5rem;
+}
+
+.meme-block:hover label {
+  height: 25rem;
+  transition: height 0.5s;
 }
 
 .meme-block input:checked + label:after {
@@ -81,37 +119,14 @@ h1 {
   
 }
 
-.meme-block .meme-content {
-  padding: 1em 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.meme-block .meme-content {
-  overflow: hidden;
-  height: 0em;
-  position: relative;
-  padding: 0 1.5em;
-  transition: height 0.4s;
-}
-
-input[name=meme]:checked ~ .meme-content.content-size {
-  height: 22rem;
-}
-
-.meme-block:hover .meme-content.content-size {
-  height: 22rem;
-}
-
 @media (max-width: 820px) {
   body {
     font-size: 1.8rem;
   }
 
   .container-back {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
   }
 
   .container-acc {
@@ -120,10 +135,6 @@ input[name=meme]:checked ~ .meme-content.content-size {
 
   .meme-block label:after {
     display: inline-block;
-  }
-
-  .meme-block:hover .meme-content.content-size {
-    height: 0rem;
   }
 }
 
@@ -135,7 +146,7 @@ input[name=meme]:checked ~ .meme-content.content-size {
 
   .container-back {
     width: 100%;
-    height: 90%;
+    height: 100%;
   }
 
   .container-acc {
@@ -144,9 +155,5 @@ input[name=meme]:checked ~ .meme-content.content-size {
 
   .meme-block label:after {
     display: inline-block;
-  }
-
-  .meme-block:hover .meme-content.content-size {
-    height: 0rem;
   }
 }
